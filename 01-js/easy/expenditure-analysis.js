@@ -14,7 +14,26 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  return [];
+  var result = [];
+  var categories = new Set();
+
+  transactions.forEach(function (transaction) {
+    categories.add(transaction.category);
+  });
+
+  categories.forEach(function (category) {
+    var total = 0;
+    transactions.forEach(function (transaction) {
+      if (category === transaction.category) {
+        total += transaction.price;
+      }
+    });
+    let ans = { category: category, totalSpent: total };
+    result.push(ans);
+  });
+
+  return result;
 }
+
 
 module.exports = calculateTotalSpentByCategory;
