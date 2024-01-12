@@ -1,0 +1,8 @@
+//The npm init -y command is a shortcut for initializing a new Node.js 
+project with default settings without requiring interactive input. 
+
+//When you run , it automatically generates a package.json file with default values and accepts 
+all the default options without asking you for confirmation.              npm init -y
+
+//Start the server              node index.js(file_name)
+

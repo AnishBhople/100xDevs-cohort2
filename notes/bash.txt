@@ -1,0 +1,61 @@
+************************ BASH COMMANDS ***************************
+
+ pwd                              {prints current directory}
+
+ cd file_name                     {change the directory}
+ cd ..                            {goes 1 folder back}
+ cd ../../                        {goes back 2 folders, can be increased by adding ../}
+
+ ls                               {shows all the files and folders in the current directory}
+ ls ..                            {shows all the files in the parent directory}
+ ls -l                            {shows all the files with their details}
+ ls -la  directory_path_name      {show all the folders and its details in that directory}
+ ls -lRa directory_path_name      {show all the details off hidden folders}
+ ls -s directory_path_name        {show the size as number of files in that directory with its name}
+ ls -lr | grep .html              {this gives all the .html files in present directory}
+ ls *.txt                         {shows all the files with .txt in present directory}
+
+ mkdir                            {make directory -> makes new folder/directory in the current folder}
+ mkdir new_tit && cd new_tit      {combine two commands  with &&}
+ mkdir -p file1/file_a           |       
+ mkdir -p file1/file_b           |----> adds new directories recursively to file1
+ mkdir -p file1/file_c           | 
+
+
+ touch                            {make a file in the current directory -> eg: touch test.txt}
+                  
+ cat path_name                    {shows the coontent of the file specified in the path name in the terminal}
+ cat > file_name                  {write contents in the file, after written press ctrl+d to come out}
+ cat >> file_name                 {append contents to the file}
+
+ vi file_name                {lest us edit files in terminal}
+                             {press i -> enter insert mode}
+                             {edit the file/ write in the file}
+                             {press esc   ->   press :   ->   write wq! }    -> this will save the contents written in the file
+                                                 {write q!}     -> will not save
+
+mv file_name/file_path folder_name/folder_path     {moves the file_name to folder_name}**
+mv current_file_name new_name                      {this is used to rename the file}
+
+cp file_name folder_name     {copies the file_name to folder_name}
+                             {the difference is between copies and moves}
+                             {this is for files and not folders}
+cp -r folder1 folder2        {copies folder1 to folder2}
+
+rm file_name           {deletes the file from the directory}
+rm -r folder_name      {deletes the folder from the directory}
+
+
+************************ node in terminal ***************************
+
+node        {shows version of our node and opens a js framework window, we can write our js code there}
+
+touch a.js  {make a new js file}
+vi a.js     {edit and write js code in the file}
+node a.js   {run the js file in the terminal and see the output}
+
+npm install name_of_library   {installs the library in the directory}
+                              {eg: npm install express}
+
+
+

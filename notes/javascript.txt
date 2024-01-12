@@ -1,0 +1,199 @@
+************************* BASIC *************************
+
+
+**** ways to declare something -> let / var / const
+**** we can print something by -> console.log("hello, world");      {-> directly printing text}
+                               -> console.log(a);                   {-> printing the value of variable a}
+
+function function_name(arguments){
+    ||               ;
+    ||               ;
+    return _ ;
+}                                             {-> Declaration of a function}
+
+function sumOfTwo(x,y){
+    return x+y;
+}                                             {->example of a function to return sum of 2 numbers}
+                                              {-> we can use +,-,/,*,^(XOR operators), to return the value we want}
+
+
+**************** LOOP *****************
+for(let i = 0 ; i < n ; i ++){
+    if(....){
+        ////
+    }else{
+        ////
+    };
+};
+
+************************* ARRAY *************************
+var emp = [];                                 {-> this is declaration of empty array}
+var arr_1 = [1,2,3,4,5];
+varr arr_2 = ["a","b","c","d","e"];           {-> Examples of array}
+console.log(arr_1[1]);                        {-> retrieve the elemnet of an array}
+
+******* OPERATIONS ON ARRAY
+var arr_1 = ["a","b"];
+var arr_2 = ["c","d","b"];                       ^-> all the output for the operations
+                                                 |
+console.log(arr_1.indexOf("b"));              {-> prints 1}
+console.log(arr_1.concat(arr_2));             {-> [ 'a', 'b', 'c', 'd' , 'b' ]}     -> if we name this new array as new_1 then
+console.log(new_1.lastIndexOf("b"));          {-> prints 4}
+console.log(arr_2.join(" "));                 {-> cdb -> join all the elemnets of an array}
+console.log(arr_1.pop());                     {-> removes last element of an array}
+console.log(arr_2.reverse());                 {-> [ 'b', 'd', 'c' ]       -> reverses the array}
+
+************************* STRING *************************
+var str = "abcxyz";                           {-> declaration of string}
+
+console.log(str.split(""));                   {-> [ 'a', 'b', 'c', 'x', 'y', 'z' ] -> splits the string in an array}
+
+************************* MATH operations *************************
+console.log(Math.sqrt(a));                    {-> gives the square root of the number}
+
+
+
+***************************** BAISC IMP QUESTIONS ************************************ (Efficient solutions)
+
+function maxArrayOf(arr){
+  return Math.max.apply(null, arr);
+}
+a = maxArrayOf([1,2,3,4,5]);
+console.log(a);                               {-> Return 5 -> program to find the maximum element in the array}
+
+
+function isPalindrome(str){
+  return str == str.split("").reverse().join("");                {-> this is a boolean function}
+}
+a  = isPalindrome("abc12321cba");
+console.log(a);                              {-> to check if the passed string is palimdrome or not}
+
+
+function reverseString(str){
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("abcd1234"));      {-> reverses the string and prints it}
+
+
+function isEven(arr){
+  var emp = [];                              
+  for(let i = 0 ; i < arr.length ; i++){
+    if(arr[i] % 2 == 0){
+      emp.push(arr[i]);
+    }
+  }
+  return emp;
+}                                            {-> method 1 to find even number of an array}
+
+function filterArray(arr){
+  return arr.filter(num => num % 2 == 0);
+}                                            {-> method 2 using filter on an array}
+
+
+function isFactorial(x){
+  if(x==0 || x==1){
+    return 1;
+  }else{
+    return x * isFactorial(x-1);
+  }
+}                                            {-> this gives the factorial of a number}
+
+
+function isPrime(n){
+  if(n<2){
+    return false;
+  }
+  for(let i = 2 ; i < n ; i ++){
+    if(n % i == 0){
+      return false;
+    }
+  }
+  return true;
+}                                           {-> this tells if the number is prime or not}
+
+
+********************************** MAP , FILTER & ARROW FNS **********************************
+
+
+// To understand MAP we will take and example -> given an array return an array where every valu is multiplied by 2
+// [1,2,3,4,5] -> [2,4,6,8,10]
+the ugly way ->
+               const array = [1,2,3,4,5];
+               const newArray = [];
+               for(let i = 0 ; i < array.length ; i++){
+                 newArray.push(array[i] * 2);
+               }
+               console.log(newArray);
+Using MAP ->
+              const ans = array.map(function transform(i){
+               return i * 2;
+              });
+              console.log(ans);
+
+
+// Filter -> based on true or false
+// To understand FILTER we will take and example -> given an array return an array where every value is even only
+// [1,2,3,4,5] -> [2,4]
+the ugly way ->
+              const array = [1,2,3,4,5];
+              const newArray = [];
+              for(let i = 0 ; i < array.length ; i++){
+                if(array[i]%2==0){
+                  newArray.push(array[i]);
+                }
+              }
+              console.log(newArray);
+Using FILTER ->
+              const ans = array.filter(function filterLogic(n) {
+                                if (n % 2 == 0) {
+                                  return true;
+                                } else {
+                                  return false;
+                                }
+                              });
+              console.log(ans);
+
+
+
+//use of ARROW FNS
+const sum = (a, b) => {             
+  return a + b;
+}
+                                 function sum(a, b){
+                                   return a + b;
+                                 }
+
+**This both are almost same
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

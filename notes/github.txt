@@ -1,0 +1,3 @@
+git config user.name       -> get username of the account
+git config user.email      -> get email of the account
+git status                 -> tells us branch info and commits 
